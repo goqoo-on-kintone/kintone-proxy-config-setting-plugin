@@ -5,6 +5,7 @@
   "devDependencies": {
     "@kintone/dts-gen": "^6.1.27",
     "prettier": "^2.8.7",
-    "typescript": "^5.0.4"
+    "typescript": "^5.0.4",
+    "vite": "^4.2.1"
   }
 }
