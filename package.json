@@ -1,5 +1,10 @@
 {
   "name": "kintone-vite-sandbox",
   "scripts": {},
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "@kintone/dts-gen": "^6.1.27",
+    "prettier": "^2.8.7",
+    "typescript": "^5.0.4"
+  }
 }

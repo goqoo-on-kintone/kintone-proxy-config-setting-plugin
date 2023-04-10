@@ -1,0 +1,4 @@
+test/data-record
+dist/
+*.md
+legacy-test
