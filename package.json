@@ -1,6 +1,8 @@
 {
   "name": "kintone-vite-sandbox",
-  "scripts": {},
+  "scripts": {
+    "build": "tsc --noEmit && vite build"
+  },
   "license": "MIT",
   "devDependencies": {
     "@kintone/dts-gen": "^6.1.27",
