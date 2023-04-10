@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "target": "es2016",
+    "module": "ESNext",
+    "strict": true,
+    "isolatedModules": true,
+    "lib": ["DOM", "ES2022"],
+    "skipLibCheck": true
+  },
+  "includes": ["src/**/*.ts"],
+  "exclude": ["dist"],
+  "files": ["./node_modules/@kintone/dts-gen/kintone.d.ts", "./types/fields.d.ts"]
+}
