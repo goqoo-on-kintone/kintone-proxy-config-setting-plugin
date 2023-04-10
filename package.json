@@ -1,7 +1,8 @@
 {
   "name": "kintone-vite-sandbox",
   "scripts": {
-    "build": "tsc --noEmit && vite build"
+    "build": "tsc --noEmit && vite build",
+    "dev": "vite preview"
   },
   "license": "MIT",
   "devDependencies": {
