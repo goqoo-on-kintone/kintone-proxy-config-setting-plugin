@@ -5,14 +5,14 @@ export default {
     target: 'es2021',
     rollupOptions: {
       input: {
-        // ホスティングは https://localhost:4173/desktop.js
-        desktop: 'src/main.ts',
+        // ホスティングは https://localhost:4173/[name].js
+        address: 'src/apps/address/index.ts',
+        customer: 'src/apps/customer/index.ts',
       },
       output: {
-        format: 'iife', // 即時関数で囲む
-        dir: 'dist', // 「dist」ディレクトリーの下にビルド後のファイルを生成する
-        entryFileNames: '[name].js', // 生成物のファイル名は input のキー名とする
-        // 今回は「desktop.js」というファイルが生成される
+        dir: 'dist',
+        entryFileNames: '[name].js',
+        inlineDynamicImports: false,
       },
     },
   },

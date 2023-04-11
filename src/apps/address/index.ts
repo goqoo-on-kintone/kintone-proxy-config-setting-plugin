@@ -1,4 +1,4 @@
-import { searchAddressByZipcode, validateZipcode } from './zipcode'
+import { searchAddressByZipcode, validateZipcode } from '../../zipcode'
 
 interface KintoneEvent {
   record: kintone.types.SavedFields
