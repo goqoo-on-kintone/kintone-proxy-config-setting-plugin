@@ -5,7 +5,8 @@ export default {
     target: 'es2021',
     rollupOptions: {
       input: {
-        // ホスティングは https://localhost:4173/[name].js
+        // devでのホスティングは https://localhost:5173/src/loaders/[name].js
+        // previewでのホスティングは https://localhost:4173/[name].js
         address: 'src/apps/address/index.ts',
         customer: 'src/apps/customer/index.ts',
       },
