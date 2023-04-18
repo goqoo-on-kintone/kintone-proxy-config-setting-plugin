@@ -1,5 +1,5 @@
 {
-  "name": "kintone-vite-sandbox",
+  "name": "kintone-plugin-vite-sandbox",
   "scripts": {
     "dev": "vite",
     "build": "tsc --noEmit && vite build",
