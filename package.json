@@ -3,11 +3,15 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc --noEmit && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "package": "kintone-plugin-packer --ppk private.ppk --out dist/plugin.zip plugin",
+    "upload": "kintone-plugin-uploader dist/plugin.zip --watch --waiting-dialog-ms 3000"
   },
   "license": "MIT",
   "devDependencies": {
     "@kintone/dts-gen": "^6.1.27",
+    "@kintone/plugin-packer": "^6.0.33",
+    "@kintone/plugin-uploader": "^7.1.10",
     "@vitejs/plugin-basic-ssl": "^1.0.1",
     "prettier": "^2.8.7",
     "typescript": "^5.0.4",
