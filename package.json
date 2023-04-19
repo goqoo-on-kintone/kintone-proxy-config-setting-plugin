@@ -1,5 +1,5 @@
 {
-  "name": "kintone-plugin-vite-sandbox",
+  "name": "kintone-plugin-webpack-sandbox",
   "scripts": {
     "format": "prettier --write \"src/**/*.{js,ts,json}\"",
     "lint": "eslint --fix \"src/**/*.{js,ts}\"",

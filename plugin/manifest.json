@@ -4,10 +4,10 @@
   "type": "APP",
   "icon": "image/icon.png",
   "name": {
-    "en": "kintone-plugin-vite-sandbox"
+    "en": "kintone-plugin-webpack-sandbox"
   },
   "description": {
-    "en": "kintone-plugin-vite-sandbox"
+    "en": "kintone-plugin-webpack-sandbox"
   },
   "config": {
     "html": "html/config.html",
