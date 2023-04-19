@@ -3,25 +3,15 @@
   "version": 1,
   "type": "APP",
   "desktop": {
-    "js": [
-      "js/desktop.js"
-    ],
-    "css": [
-      "css/desktop.css"
-    ]
+    "js": ["js/app.js"],
+    "css": ["css/app.css"]
   },
   "icon": "image/icon.png",
   "config": {
     "html": "html/config.html",
-    "js": [
-      "js/config.js"
-    ],
-    "css": [
-      "css/config.css"
-    ],
-    "required_params": [
-      "message"
-    ]
+    "js": ["js/config.js"],
+    "css": ["css/config.css"],
+    "required_params": ["message"]
   },
   "name": {
     "en": "kintone-plugin-vite-sandbox"
@@ -30,11 +20,7 @@
     "en": "kintone-plugin-vite-sandbox"
   },
   "mobile": {
-    "js": [
-      "js/mobile.js"
-    ],
-    "css": [
-      "css/mobile.css"
-    ]
+    "js": ["js/app.js"],
+    "css": ["css/app.css"]
   }
 }
