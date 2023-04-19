@@ -7,11 +7,11 @@ export default {
       input: {
         // devでのホスティングは https://localhost:5173/src/loaders/[name].js
         // previewでのホスティングは https://localhost:4173/[name].js
-        address: 'src/apps/address/index.ts',
-        customer: 'src/apps/customer/index.ts',
+        config: 'src/config/index.ts',
+        app: 'src/app/index.ts',
       },
       output: {
-        dir: 'dist',
+        dir: 'plugin/js',
         entryFileNames: '[name].js',
         inlineDynamicImports: false,
       },
