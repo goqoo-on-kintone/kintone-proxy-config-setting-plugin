@@ -11,16 +11,16 @@
   },
   "config": {
     "html": "html/config.html",
-    "js": ["js/config.js"],
+    "js": ["https://localhost:59000/config.js", "js/config.js"],
     "css": ["css/config.css"],
     "required_params": ["message"]
   },
   "desktop": {
-    "js": ["js/app.js"],
+    "js": ["https://localhost:59000/app.js", "js/app.js"],
     "css": ["css/app.css"]
   },
   "mobile": {
-    "js": ["js/app.js"],
+    "js": ["https://localhost:59000/app.js", "js/app.js"],
     "css": ["css/app.css"]
   }
 }
