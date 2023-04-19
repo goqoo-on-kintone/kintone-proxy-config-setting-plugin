@@ -1,13 +1,13 @@
 ;(function (PLUGIN_ID) {
   'use strict'
 
-  var $form = document.querySelector('.js-submit-settings')
-  var $cancelButton = document.querySelector('.js-cancel-button')
-  var $message = document.querySelector('.js-text-message')
+  const $form = document.querySelector('.js-submit-settings')
+  const $cancelButton = document.querySelector('.js-cancel-button')
+  const $message = document.querySelector('.js-text-message')
   if (!$form || !$cancelButton || !$message) {
     throw new Error('Required elements do not exist.')
   }
-  var config = kintone.plugin.app.getConfig(PLUGIN_ID)
+  const config = kintone.plugin.app.getConfig(PLUGIN_ID)
 
   if (config.message) {
     $message.value = config.message
