@@ -2,22 +2,22 @@
   "manifest_version": 1,
   "version": 1,
   "type": "APP",
-  "desktop": {
-    "js": ["js/app.js"],
-    "css": ["css/app.css"]
-  },
   "icon": "image/icon.png",
+  "name": {
+    "en": "kintone-plugin-vite-sandbox"
+  },
+  "description": {
+    "en": "kintone-plugin-vite-sandbox"
+  },
   "config": {
     "html": "html/config.html",
     "js": ["js/config.js"],
     "css": ["css/config.css"],
     "required_params": ["message"]
   },
-  "name": {
-    "en": "kintone-plugin-vite-sandbox"
-  },
-  "description": {
-    "en": "kintone-plugin-vite-sandbox"
+  "desktop": {
+    "js": ["js/app.js"],
+    "css": ["css/app.css"]
   },
   "mobile": {
     "js": ["js/app.js"],
