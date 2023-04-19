@@ -4,7 +4,15 @@
     "format": "prettier --write \"src/**/*.{js,ts,json}\"",
     "lint": "eslint --fix \"src/**/*.{js,ts}\"",
     "package": "kintone-plugin-packer --ppk private.ppk --out dist/plugin.zip plugin",
-    "upload": "kintone-plugin-uploader dist/plugin.zip --watch --waiting-dialog-ms 3000"
+    "upload": "kintone-plugin-uploader dist/plugin.zip --watch --waiting-dialog-ms 3000",
+    "start": "goqoo start",
+    "s": "goqoo s",
+    "build": "goqoo build",
+    "watch": "goqoo watch",
+    "release": "NODE_ENV=production goqoo release",
+    "generate": "goqoo generate",
+    "g": "goqoo g",
+    "test": "jest"
   },
   "license": "MIT",
   "devDependencies": {
