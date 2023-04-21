@@ -2,7 +2,7 @@
   "manifest_version": 1,
   "version": 1,
   "type": "APP",
-  "icon": "image/icon.png",
+  "icon": "icon.png",
   "name": {
     "en": "kintone-plugin-webpack-sandbox"
   },
@@ -10,17 +10,17 @@
     "en": "kintone-plugin-webpack-sandbox"
   },
   "config": {
-    "html": "html/config.html",
+    "html": "config.html",
     "js": ["https://localhost:59000/config.js", "js/config.js"],
-    "css": ["css/config.css"],
+    "css": [],
     "required_params": []
   },
   "desktop": {
     "js": ["https://localhost:59000/app.js", "js/app.js"],
-    "css": ["css/app.css"]
+    "css": []
   },
   "mobile": {
     "js": ["https://localhost:59000/app.js", "js/app.js"],
-    "css": ["css/app.css"]
+    "css": []
   }
 }
