@@ -13,7 +13,7 @@
     "html": "html/config.html",
     "js": ["https://localhost:59000/config.js", "js/config.js"],
     "css": ["css/config.css"],
-    "required_params": ["date", "condition", "targetFields"]
+    "required_params": []
   },
   "desktop": {
     "js": ["https://localhost:59000/app.js", "js/app.js"],
