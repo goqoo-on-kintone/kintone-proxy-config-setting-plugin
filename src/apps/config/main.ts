@@ -1,25 +1,12 @@
 import { Button, Combobox, Dialog, Table, Text, TextArea } from 'kintone-ui-component'
 // @ts-expect-error
 import INNER_HTML from './config-inner.html'
+import { loadProxyConfig, saveProxyConfig } from 'utils/proxyConfigUtils'
+import type { ProxyConfig } from 'utils/configTypes'
 
 document.querySelector<HTMLElement>('section.settings')!.innerHTML = INNER_HTML
 
-const PLUGIN_ID = kintone.$PLUGIN_ID
-
-const defaultConfig = [
-  {
-    url: '',
-    method: 'GET',
-    headers: '',
-    dataJson: '',
-  },
-  {
-    url: '',
-    method: 'POST',
-    headers: '',
-    dataJson: '',
-  },
-]
+const { proxyConfigs } = loadProxyConfig(kintone.$PLUGIN_ID)
 
 const renderUrl = (value: string) => {
   const text = new Text({
@@ -69,18 +56,12 @@ const table = new Table({
     },
     {
       title: 'Data',
-      field: 'dataJson',
+      field: 'data',
       render: renderJson,
     },
   ],
-  data: defaultConfig,
-  className: 'options-class',
-  id: 'options-id',
-  actionButton: true,
-  visible: true,
+  data: proxyConfigs,
 })
-
-// space.appendChild(table)
 
 table.addEventListener('change', (event) => {
   console.info(event)
@@ -118,14 +99,6 @@ const dialog = new Dialog({
   footer: divEl,
 })
 
-// Display the value when saved last time
-const config = kintone.plugin.app.getConfig(PLUGIN_ID)
-if (Object.keys(config).length) {
-  // TODO: 保存対象データを設定
-  // datePicker.value = config.date
-  // dropdown.value = config.condition
-}
-
 // Display components
 const dateSpaceEl = document.querySelector<HTMLDivElement>('#table-space')!
 dateSpaceEl.appendChild(table)
@@ -134,42 +107,21 @@ buttonSpaceEl.appendChild(cancelButton)
 buttonSpaceEl.appendChild(saveButton)
 
 // When the Save button is clicked
-saveButton.addEventListener('click', (event) => {
-  // TODO: 保存対象データを設定
-  // // Reset error messages
-  // datePicker.error = ''
-  // dropdown.error = ''
-  // Check required itmes
-  const requiredFlag = false
-  // if (!datePicker.value) {
-  //   datePicker.error = 'Please enter'
-  //   requiredFlag = true
-  // }
-  // if (dropdown.value === '-----') {
-  //   dropdown.error = 'Please select'
-  //   requiredFlag = true
-  // }
-  if (requiredFlag) return
+saveButton.addEventListener('click', () => {
   dialog.open()
   divEl.appendChild(dialogCancelButton)
   divEl.appendChild(dialogOKButton)
 })
 // When the Cancel button is clicked
-cancelButton.addEventListener('click', (event) => {
+cancelButton.addEventListener('click', () => {
   history.back()
 })
 
 // When the OK button in Dialog is clicked
-dialogOKButton.addEventListener('click', (event) => {
-  // const date = datePicker.value
-  // const condition = dropdown.value
-  const config = {
-    // date: date,
-    // condition: condition,
-  }
-  kintone.plugin.app.setConfig(config)
+dialogOKButton.addEventListener('click', () => {
+  saveProxyConfig({ proxyConfigs: table.data as ProxyConfig[] }, [])
 })
 // When the Cancel button in Dialog is clicked
-dialogCancelButton.addEventListener('click', (event) => {
+dialogCancelButton.addEventListener('click', () => {
   dialog.close()
 })
