@@ -2,6 +2,7 @@ import { Button, Combobox, Dialog, Table, Text, TextArea } from 'kintone-ui-comp
 // @ts-expect-error
 import INNER_HTML from './config-inner.html'
 import { loadProxyConfig, saveProxyConfig } from 'utils/proxyConfigUtils'
+import { createInitialProxyConfig } from 'utils/configTypes'
 import type { ProxyConfig } from 'utils/configTypes'
 
 document.querySelector<HTMLElement>('section.settings')!.innerHTML = INNER_HTML
@@ -73,6 +74,11 @@ type TableChangeDetail = {
 table.addEventListener('change', (event) => {
   // @ts-expect-error
   const detail = event.detail as TableChangeDetail
+  if (detail.type === 'add-row') {
+    const newData = detail.data
+    newData[detail.rowIndex] = createInitialProxyConfig()
+    table.data = newData
+  }
   if (detail.type === 'remove-row') {
     const removedRow = detail.oldData[detail.rowIndex]
     removedProxyConfigs.push(removedRow)
