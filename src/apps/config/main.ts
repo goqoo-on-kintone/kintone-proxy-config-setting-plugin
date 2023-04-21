@@ -1,4 +1,4 @@
-import { Button, Dialog, Dropdown, Table } from 'kintone-ui-component'
+import { Button, Combobox, Dialog, Table } from 'kintone-ui-component'
 // @ts-expect-error
 import INNER_HTML from './config-inner.html'
 
@@ -12,17 +12,17 @@ const renderAge = (dataCell: string) => {
   return spanElement
 }
 
-const renderName = (cellData: string) => {
-  const dropdown = new Dropdown({
+const renderMethod = (value: string) => {
+  const combobox = new Combobox({
     items: [
       { label: 'GET', value: 'GET' },
       { label: 'POST', value: 'POST' },
       { label: 'PUT', value: 'PUT' },
       { label: 'DELETE', value: 'DELETE' },
     ],
-    value: cellData,
+    value,
   })
-  return dropdown
+  return combobox
 }
 
 const table = new Table({
@@ -30,7 +30,7 @@ const table = new Table({
     {
       title: 'Method',
       field: 'method',
-      render: renderName,
+      render: renderMethod,
     },
     {
       title: 'Address',
