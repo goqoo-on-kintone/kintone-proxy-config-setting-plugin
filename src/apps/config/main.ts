@@ -1,4 +1,8 @@
 import { Button, Dialog, Dropdown, Table } from 'kintone-ui-component'
+// @ts-expect-error
+import INNER_HTML from './config-inner.html'
+
+document.querySelector<HTMLElement>('section.settings')!.innerHTML = INNER_HTML
 
 const PLUGIN_ID = kintone.$PLUGIN_ID
 
