@@ -105,7 +105,6 @@ divEl.setAttribute('id', 'kuc_dialog_footer')
 // Create Dialog component
 const dialog = new Dialog({
   content: `<div style="text-align: center; padding: 48px 24px">
-              <p style="margin: 0;">The target fields are colored according to the conditions.</p>
               <p>Are you sure to save your settings?</p>
               <div>`,
   footer: divEl,
