@@ -1,4 +1,4 @@
-import { Button, Combobox, Dialog, Table } from 'kintone-ui-component'
+import { Button, Combobox, Dialog, Table, Text, TextArea } from 'kintone-ui-component'
 // @ts-expect-error
 import INNER_HTML from './config-inner.html'
 
@@ -6,10 +6,27 @@ document.querySelector<HTMLElement>('section.settings')!.innerHTML = INNER_HTML
 
 const PLUGIN_ID = kintone.$PLUGIN_ID
 
-const renderAge = (dataCell: string) => {
-  const spanElement = document.createElement('span')
-  spanElement.innerText = `The age is ${dataCell}`
-  return spanElement
+const defaultConfig = [
+  {
+    url: '',
+    method: 'GET',
+    headers: '',
+    dataJson: '',
+  },
+  {
+    url: '',
+    method: 'POST',
+    headers: '',
+    dataJson: '',
+  },
+]
+
+const renderUrl = (value: string) => {
+  const text = new Text({
+    value,
+    placeholder: 'https://xxxx/',
+  })
+  return text
 }
 
 const renderMethod = (value: string) => {
@@ -25,35 +42,38 @@ const renderMethod = (value: string) => {
   return combobox
 }
 
+const renderJson = (value: string) => {
+  const text = new TextArea({
+    value,
+    placeholder: JSON.stringify({ key1: 'value1', key2: 'value2' }, null, 2),
+  })
+  return text
+}
+
 const table = new Table({
   columns: [
+    {
+      title: 'URL',
+      field: 'url',
+      render: renderUrl,
+    },
     {
       title: 'Method',
       field: 'method',
       render: renderMethod,
     },
     {
-      title: 'Address',
-      field: 'address',
+      title: 'Headers',
+      field: 'headers',
+      render: renderJson,
     },
     {
-      title: 'Age',
-      field: 'age',
-      render: renderAge,
+      title: 'Data',
+      field: 'dataJson',
+      render: renderJson,
     },
   ],
-  data: [
-    {
-      name: 'john',
-      age: 32,
-      address: 'New York No. 1 Lake Park',
-    },
-    {
-      name: 'steven',
-      age: 22,
-      address: 'New York No. 2 Lake Park',
-    },
-  ],
+  data: defaultConfig,
   className: 'options-class',
   id: 'options-id',
   actionButton: true,
