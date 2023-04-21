@@ -1,5 +1,8 @@
 import { Button, DatePicker, Dialog, Dropdown, MultiChoice } from 'kintone-ui-component'
-;(async (PLUGIN_ID) => {
+
+const PLUGIN_ID = kintone.$PLUGIN_ID
+
+;(async () => {
   // Create DatePicker component
   const datePicker = new DatePicker({
     label: 'Reference Date',
@@ -166,4 +169,4 @@ import { Button, DatePicker, Dialog, Dropdown, MultiChoice } from 'kintone-ui-co
   dialogCancelButton.addEventListener('click', (event) => {
     dialog.close()
   })
-})(kintone.$PLUGIN_ID)
+})()
