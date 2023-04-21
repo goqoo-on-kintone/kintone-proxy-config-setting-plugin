@@ -1,3 +1,7 @@
 .settings-heading {
   padding: 1em 0;
 }
+
+.url-input {
+  --kuc-text-input-width: 25rem;
+}

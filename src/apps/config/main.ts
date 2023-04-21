@@ -11,7 +11,7 @@ const { proxyConfigs } = loadProxyConfig(kintone.$PLUGIN_ID)
 const renderUrl = (value: string) => {
   const text = new Text({
     value,
-    placeholder: 'https://xxxx/',
+    className: 'url-input',
   })
   return text
 }
