@@ -63,8 +63,20 @@ const table = new Table({
   data: proxyConfigs,
 })
 
+const removedProxyConfigs: ProxyConfig[] = []
+type TableChangeDetail = {
+  type: 'add-row' | 'remove-row'
+  rowIndex: number
+  data: ProxyConfig[]
+  oldData: ProxyConfig[]
+}
 table.addEventListener('change', (event) => {
-  console.info(event)
+  // @ts-expect-error
+  const detail = event.detail as TableChangeDetail
+  if (detail.type === 'remove-row') {
+    const removedRow = detail.oldData[detail.rowIndex]
+    removedProxyConfigs.push(removedRow)
+  }
 })
 
 // Get field info to display in MultiChoice component
@@ -119,7 +131,7 @@ cancelButton.addEventListener('click', () => {
 
 // When the OK button in Dialog is clicked
 dialogOKButton.addEventListener('click', () => {
-  saveProxyConfig({ proxyConfigs: table.data as ProxyConfig[] }, [])
+  saveProxyConfig({ proxyConfigs: table.data as ProxyConfig[] }, removedProxyConfigs)
 })
 // When the Cancel button in Dialog is clicked
 dialogCancelButton.addEventListener('click', () => {
