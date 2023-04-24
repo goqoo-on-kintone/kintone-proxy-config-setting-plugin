@@ -1,5 +1,5 @@
 {
-  "name": "kintone-plugin-proxy-config",
+  "name": "kintone-proxy-config-setting-plugin",
   "scripts": {
     "preinstall": "typesync || true",
     "format": "prettier --write \"src/**/*.{js,ts,json}\"",

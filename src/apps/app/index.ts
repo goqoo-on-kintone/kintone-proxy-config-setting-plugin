@@ -1,5 +1,5 @@
 import { goqoo } from 'goqoo'
 
-goqoo('kintone-plugin-proxy-app', () => {
+goqoo('proxy-config-setting-plugin', () => {
   require('./main')
 })
