@@ -1,5 +1,5 @@
 {
-  "name": "kintone-plugin-webpack-sandbox",
+  "name": "kintone-plugin-proxy-config",
   "scripts": {
     "preinstall": "typesync || true",
     "format": "prettier --write \"src/**/*.{js,ts,json}\"",

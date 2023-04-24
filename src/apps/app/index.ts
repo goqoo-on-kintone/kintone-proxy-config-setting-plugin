@@ -1,5 +1,5 @@
 import { goqoo } from 'goqoo'
 
-goqoo('plugin-webpack-sandbox-app', () => {
+goqoo('kintone-plugin-proxy-app', () => {
   require('./main')
 })

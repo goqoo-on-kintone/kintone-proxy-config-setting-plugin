@@ -4,10 +4,12 @@
   "type": "APP",
   "icon": "plugin/icon.png",
   "name": {
-    "en": "kintone-plugin-webpack-sandbox"
+    "en": "Proxy Config Setting Plugin",
+    "ja": "Proxy Config 設定プラグイン"
   },
   "description": {
-    "en": "kintone-plugin-webpack-sandbox"
+    "en": "This plugin provides UI for using kintone.plugin.app.setProxyConfig().",
+    "ja": "kintone.plugin.app.setProxyConfig()を使うためのUIを提供するプラグインです。"
   },
   "config": {
     "html": "plugin/config.html",
