@@ -5,3 +5,15 @@
 .url-input {
   --kuc-text-input-width: 25rem;
 }
+
+#kuc_cancel_button {
+  margin-right: 16px;
+}
+
+#kuc_dialog_footer {
+  text-align: center;
+}
+
+#kuc_dialog_cancel_button {
+  margin-right: 16px;
+}
