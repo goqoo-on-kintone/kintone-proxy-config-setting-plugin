@@ -3647,6 +3647,11 @@ detect-indent@^6.0.0:
   resolved "https://registry.yarnpkg.com/detect-indent/-/detect-indent-6.1.0.tgz#592485ebbbf6b3b1ab2be175c8393d04ca0d57e6"
   integrity sha512-reYkTUJAZb9gUuZ2RvVCNhVHdg62RHnJ7WJl8ftMi4diZ6NWlciOzQN88pUhSELEwflJht4oQDv0F0BMlwaYtA==
 
+detect-libc@^1.0.3:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/detect-libc/-/detect-libc-1.0.3.tgz#fa137c4bd698edf55cd5cd02ac559f91a4c4ba9b"
+  integrity sha512-pGjwhsmsp4kL2RTz08wcOlGN83otlqHeD/Z5T8GXZB+/YcpQ/dgo+lbU8ZsGxV0HIvqqxo9l7mqYwyYMD9bKDg==
+
 detect-newline@^3.0.0:
   version "3.1.0"
   resolved "https://registry.yarnpkg.com/detect-newline/-/detect-newline-3.1.0.tgz#576f5dfc63ae1a192ff192d8ad3af6308991b651"
@@ -4533,6 +4538,13 @@ fd-slicer@~1.1.0:
   dependencies:
     pend "~1.2.0"
 
+fibers@^5.0.3:
+  version "5.0.3"
+  resolved "https://registry.yarnpkg.com/fibers/-/fibers-5.0.3.tgz#2fd03acb255db66fe693d15beafbf5ae92193fd7"
+  integrity sha512-/qYTSoZydQkM21qZpGLDLuCq8c+B8KhuCQ1kLPvnRNhxhVbvrpmH9l2+Lblf5neDuEsY4bfT7LeO553TXQDvJw==
+  dependencies:
+    detect-libc "^1.0.3"
+
 figures@^3.0.0:
   version "3.2.0"
   resolved "https://registry.yarnpkg.com/figures/-/figures-3.2.0.tgz#625c18bd293c604dc4a8ddb2febf0c88341746af"
@@ -5012,10 +5024,10 @@ gopd@^1.0.1:
   dependencies:
     get-intrinsic "^1.1.3"
 
-goqoo@^1.3.0-beta003:
-  version "1.3.0-beta003"
-  resolved "https://registry.yarnpkg.com/goqoo/-/goqoo-1.3.0-beta003.tgz#3d60531b418f7d855cd712116f3001cdd9152f94"
-  integrity sha512-hU+v23Y4CZdmWdmh9syZOhZqeJsHOLyzFJ141zxKLpP0ZdkBRvhA8OdjmbxaH0W8qWemdxmCJTKBuCvfwB5sOw==
+goqoo@^1.3.0-beta009:
+  version "1.3.0-beta009"
+  resolved "https://registry.yarnpkg.com/goqoo/-/goqoo-1.3.0-beta009.tgz#a45e754aa2ca5b37a07ba1827ea5bbe97b92f215"
+  integrity sha512-+YQ0KqVNy0OAmY8Eq+oRMflT+YAInyLYyfOPbbbMEb9S5SwQXB9ea93QVPDBvwcp9iubONd2Nj1244p1EH+rgA==
   dependencies:
     "@babel/core" "^7.14.3"
     "@babel/preset-env" "^7.14.2"
@@ -5034,6 +5046,7 @@ goqoo@^1.3.0-beta003:
     css-loader "^5.2.4"
     dotenv "^10.0.0"
     dotenv-webpack "^7.0.3"
+    fibers "^5.0.3"
     fork-ts-checker-webpack-plugin "^6.2.10"
     fs-extra "^9.1.0"
     gyuma "^0.6.0"
