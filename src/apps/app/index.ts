@@ -1,5 +1,6 @@
 import { goqoo } from 'goqoo'
+import { entryName } from 'utils/entryName'
 
-goqoo('proxy-config-setting-plugin', () => {
+goqoo(entryName('app'), () => {
   require('./main')
 })
