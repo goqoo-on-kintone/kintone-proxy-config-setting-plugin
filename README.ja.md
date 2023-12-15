@@ -9,25 +9,32 @@
 Zip形式での配布は行いませんので、プラグインのパッケージングは各自で実施してください。  
 
 ### 環境構築
-```
+#### インストール
+```shell
 git clone https://github.com/goqoo-on-kintone/kintone-proxy-config-setting-plugin.git
 cd kintone-proxy-config-setting-plugin
 yarn install
-yarn build
 ```
-
-### 本番用ビルド
-```
+#### 本番用と開発用の証明書を作成
+```shell
 yarn create-ppk
 mv xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx.ppk private-production.ppk
-yarn package:production
-# created dist/plugin-production.zip
-```
-
-### 開発ビルド
-```
 yarn create-ppk
 mv xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx.ppk private-development.ppk
-yarn package
-# created dist/plugin-development.zip
+```
+
+### 本番用ビルド、デプロイ
+パッケージングとアップロードを順番に行います。
+```shell
+yarn package:production # Created dist/plugin-production.zip
+yarn upload:production
+```
+
+### 開発用ビルド、デプロイ
+パッケージングとアップロードは一度だけ行い、以降はローカルサーバー経由で開発します。  
+ローカルサーバーが止まっている間は、アップロード済みのプログラムが動作します。
+```shell
+yarn package:development # Created dist/plugin-development.zip
+yarn upload:development
+yarn start
 ```
