@@ -5024,10 +5024,10 @@ gopd@^1.0.1:
   dependencies:
     get-intrinsic "^1.1.3"
 
-goqoo@^1.3.0-beta009:
-  version "1.3.0-beta009"
-  resolved "https://registry.yarnpkg.com/goqoo/-/goqoo-1.3.0-beta009.tgz#a45e754aa2ca5b37a07ba1827ea5bbe97b92f215"
-  integrity sha512-+YQ0KqVNy0OAmY8Eq+oRMflT+YAInyLYyfOPbbbMEb9S5SwQXB9ea93QVPDBvwcp9iubONd2Nj1244p1EH+rgA==
+goqoo@^1.3.0-beta011:
+  version "1.3.0-beta011"
+  resolved "https://registry.yarnpkg.com/goqoo/-/goqoo-1.3.0-beta011.tgz#ec12af4e381e833b6b0cb105b74999e052314907"
+  integrity sha512-+mE/G6mz+xUXpymISdFCbpggmbJiDlLRk1q0WHac1rqfefjnAxjwU0tfOBWrbOamwk2usePpwrTf01BBmhsdnw==
   dependencies:
     "@babel/core" "^7.14.3"
     "@babel/preset-env" "^7.14.2"
@@ -5043,6 +5043,7 @@ goqoo@^1.3.0-beta009:
     clipboard-copy "^4.0.1"
     core-js "^3.16.2"
     cosmiconfig "^7.0.0"
+    cross-spawn "^7.0.3"
     css-loader "^5.2.4"
     dotenv "^10.0.0"
     dotenv-webpack "^7.0.3"
