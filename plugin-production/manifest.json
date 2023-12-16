@@ -1,6 +1,6 @@
 {
   "manifest_version": 1,
-  "version": 2,
+  "version": "2.1",
   "type": "APP",
   "icon": "plugin/icon.png",
   "name": {
